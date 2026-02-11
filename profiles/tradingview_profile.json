@@ -1,0 +1,29 @@
+{
+  "platform": "tradingview",
+  "description": "TradingView charting and analysis platform",
+  "capabilities": [
+    "chart_analysis",
+    "drawing_tools",
+    "indicators",
+    "alerts",
+    "paper_trading"
+  ],
+  "authentication": {
+    "type": "manual",
+    "requires_browser": true
+  },
+  "supported_actions": [
+    "change_timeframe",
+    "draw_trendline",
+    "apply_fib",
+    "open_trade_panel",
+    "execute_market_order",
+    "set_alert",
+    "draw_horizontal_line"
+  ],
+  "config": {
+    "default_timeframe": "H4",
+    "chart_theme": "dark",
+    "auto_save": true
+  }
+}

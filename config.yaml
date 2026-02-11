@@ -1,0 +1,61 @@
+# AntiGravity System Configuration
+
+system:
+  name: "AntiGravity Trading System"
+  version: "1.0.0"
+  mode: "institutional"  # institutional | retail
+
+# Risk Management
+risk:
+  max_risk_per_trade: 0.02  # 2% per trade
+  max_daily_drawdown: 0.05   # 5% daily drawdown
+  max_total_drawdown: 0.10   # 10% total drawdown
+  max_concurrent_trades: 3
+  emergency_stop_enabled: true
+
+# Decision Engine
+decision:
+  require_h4_structure: true
+  require_mtf_confirmation: true
+  min_rr_ratio: 2.0
+  allowed_sessions:
+    - "london"
+    - "newyork"
+    - "asia"
+
+# Platform Settings
+platforms:
+  tradingview:
+    enabled: true
+    auto_execute: false  # Manual confirmation required
+  
+  binance:
+    enabled: true
+    testnet: false
+    api_key_env: "BINANCE_API_KEY"
+    api_secret_env: "BINANCE_API_SECRET"
+  
+  bybit:
+    enabled: true
+    testnet: false
+    api_key_env: "BYBIT_API_KEY"
+    api_secret_env: "BYBIT_API_SECRET"
+  
+  mt5:
+    enabled: true
+    account_env: "MT5_ACCOUNT"
+    password_env: "MT5_PASSWORD"
+    server_env: "MT5_SERVER"
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG | INFO | WARNING | ERROR
+  save_trades: true
+  save_decisions: true
+  save_risks: true
+
+# Memory
+memory:
+  track_performance: true
+  journal_enabled: true
+  retention_days: 365

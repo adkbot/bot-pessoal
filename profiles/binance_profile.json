@@ -1,0 +1,37 @@
+{
+    "platform": "binance",
+    "description": "Binance cryptocurrency exchange",
+    "capabilities": [
+        "spot_trading",
+        "futures_trading",
+        "margin_trading",
+        "staking",
+        "api_trading"
+    ],
+    "authentication": {
+        "type": "api_key",
+        "env_vars": {
+            "api_key": "BINANCE_API_KEY",
+            "api_secret": "BINANCE_API_SECRET"
+        }
+    },
+    "supported_actions": [
+        "execute_market_order",
+        "set_stop_loss",
+        "set_take_profit",
+        "get_balance",
+        "get_price",
+        "cancel_order",
+        "get_open_orders"
+    ],
+    "config": {
+        "testnet": false,
+        "default_quote_asset": "USDT",
+        "rate_limit_enabled": true,
+        "max_requests_per_minute": 1200
+    },
+    "risk_limits": {
+        "max_position_size": 10000.0,
+        "min_trade_size": 10.0
+    }
+}

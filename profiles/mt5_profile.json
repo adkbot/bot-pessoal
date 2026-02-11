@@ -1,0 +1,55 @@
+{
+    "platform": "mt5",
+    "description": "MetaTrader 5 forex and CFD trading platform",
+    "capabilities": [
+        "forex_trading",
+        "cfd_trading",
+        "algorithmic_trading",
+        "technical_analysis",
+        "expert_advisors"
+    ],
+    "authentication": {
+        "type": "credentials",
+        "env_vars": {
+            "account": "MT5_ACCOUNT",
+            "password": "MT5_PASSWORD",
+            "server": "MT5_SERVER"
+        }
+    },
+    "supported_actions": [
+        "execute_market_order",
+        "set_stop_loss",
+        "set_take_profit",
+        "get_balance",
+        "get_positions",
+        "close_position",
+        "get_symbol_info"
+    ],
+    "config": {
+        "magic_number": 234000,
+        "slippage": 10,
+        "deviation": 20,
+        "fill_policy": "FOK"
+    },
+    "symbols": {
+        "forex": [
+            "EURUSD",
+            "GBPUSD",
+            "USDJPY",
+            "AUDUSD"
+        ],
+        "metals": [
+            "XAUUSD",
+            "XAGUSD"
+        ],
+        "indices": [
+            "US30",
+            "US100",
+            "UK100"
+        ]
+    },
+    "risk_limits": {
+        "max_lots_per_trade": 10.0,
+        "min_lots_per_trade": 0.01
+    }
+}

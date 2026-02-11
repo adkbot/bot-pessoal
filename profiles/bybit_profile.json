@@ -1,0 +1,37 @@
+{
+    "platform": "bybit",
+    "description": "Bybit cryptocurrency derivatives exchange",
+    "capabilities": [
+        "futures_trading",
+        "perpetual_contracts",
+        "options_trading",
+        "leverage_trading",
+        "api_trading"
+    ],
+    "authentication": {
+        "type": "api_key",
+        "env_vars": {
+            "api_key": "BYBIT_API_KEY",
+            "api_secret": "BYBIT_API_SECRET"
+        }
+    },
+    "supported_actions": [
+        "execute_market_order",
+        "set_stop_loss",
+        "set_take_profit",
+        "get_balance",
+        "get_position",
+        "set_leverage"
+    ],
+    "config": {
+        "testnet": false,
+        "default_leverage": 10,
+        "max_leverage": 100,
+        "position_mode": "one_way"
+    },
+    "risk_limits": {
+        "max_leverage": 100,
+        "recommended_leverage": 10,
+        "max_position_value": 50000.0
+    }
+}
